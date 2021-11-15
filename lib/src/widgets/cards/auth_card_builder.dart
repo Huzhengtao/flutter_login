@@ -333,7 +333,7 @@ class AuthCardState extends State<AuthCard> with TickerProviderStateMixin {
                 widget.additionalSignUpFields != null,
             onSwitchRecoveryPassword: () => _changeCard(_recoveryIndex),
             onSwitchSignUpAdditionalData: () =>
-                _changeCard(_additionalSignUpIndex),
+                _changeCard(_confirmSignup),
             onSubmitCompleted: () {
               _forwardChangeRouteAnimation(_loginCardKey).then((_) {
                 widget.onSubmitCompleted!();
