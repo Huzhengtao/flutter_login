@@ -172,12 +172,10 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
         password: auth.password,
       ));
     } else {
-      if (!widget.requireAdditionalSignUpFields) {
-        error = await auth.onSignup!(SignupData.fromSignupForm(
-            name: auth.email,
-            password: auth.password,
-            termsOfService: auth.getTermsOfServiceResults()));
-      }
+      error = await auth.onSignup!(SignupData.fromSignupForm(
+          name: auth.email,
+          password: auth.password,
+          termsOfService: auth.getTermsOfServiceResults()));
     }
 
     // workaround to run after _cardSizeAnimation in parent finished
